@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="J:/Web production/Assignment/MTM6330-midterm/css/style.css">
+
+    </head>
+    <body>
+        
+        <div class="topnav" id="myTopnav">
+            <div id="logo">
+                <a href="./Homepage.html">
+                    <img src="./Images/Logo.jpg" />
+                </a>
+            </div>
+            <div id="menuitem">
+                <a href="./Homepage.html">Home</a>
+                <a href="./About.html">About us</a>
+                <a href="./Services.html" class="active">Services</a>
+                <a href="./Contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mainbody">
+            <div class="maindiv">
+                <div class="heading">
+                    <h2>Services</h2>
+                </div>
+                <div class="content">
+                    <div class="breadcrumb">
+                        <a class="homebreadcrumb" href="Homepage.html">HOME | </a>
+                        <a class="pagebreadcrumb" href="Services.html">SERVICES</a>
+                    </div>
+
+                    <div class="person">
+                        <div class="services">
+                            <div class="person_name">
+                                Photography
+                            </div>
+                            <div class="person_details">
+                            We offer personalized digital photography that is quick, cost-effective and easy to print on canvases, laminate, enlarge and in variety of custom frames.
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="person">
+                        <div class="person_name">
+                                Cinematography
+                            </div>
+                            <div class="person_details">
+                            With our expertise and award winning team, we create a TV advertisement that meets broadcast standards, have a clever message to market your product or service in any given time and budget.                                <br/><br/>With research we develop a story on some aspect of reality with the purpose of instruction or maintaining a historical record, and document a crisp nonfictional motion picture for you.
+                            </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="person_name">
+                                Production
+                            </div>
+                            <div class="person_details">
+                            We provide a wide selection of colors & styles in creating unique lighting designs and effects for all events, Weddings and private parties making your experience unforgettable.                                <br/><br/>Our professional team of sound engineers and technicians make sure your live event has the best sound. We have it all covered, the right sound, the DJ'S with the right charisma and experience.
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="leftside">
+                <img src="./Images/Logo.jpg"/>
+                <p>Save both time and money with Nayak Production, a home to finest makeup artists, wedding DJs, event planners and wedding services, all under one roof.</p>
+            </div>
+            <div id="rightside">
+                <h2>GET IN TOUCH</h2>
+                <p>Canada +14163017560</p>
+                <p>nayak_raghav17@yahoo.com</p>
+                <p>raghaavnayak@gmail.com</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Nayak Production. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+            var selector, elems, makeActive;
+            selector = '#menuitem a';
+            elems = document.querySelectorAll(selector);
+            makeActive = function () {
+                for (var i = 0; i < elems.length; i++)
+                    elems[i].classList.remove('active');
+                this.classList.add('active');
+            };
+            for (var i = 0; i < elems.length; i++)
+                elems[i].addEventListener('mousedown', makeActive);
+
+        </script>
+
+    </body>
+</html>
+
+

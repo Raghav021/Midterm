@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="J:/Web production/Assignment/MTM6330-midterm/css/style.css">
+    </head>
+    <body>
+
+
+        <div class="topnav" id="myTopnav">
+            <div id="logo">
+                <a href="./Homepage.html">
+                    <img src="./Images/Logo.jpg" />
+                </a>
+            </div>
+            <div id="menuitem">
+                <a href="./Homepage.html">Home</a>
+                <a href="./About.html" class="active">About us</a>
+                <a href="./Services.html">Services</a>
+                <a href="./Contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mainbody">
+            <div class="maindiv">
+                <div class="heading">
+                    <h2>About us</h2>
+                </div>
+                <div class="content">
+                    <div class="breadcrumb">
+                        <a class="homebreadcrumb" href="Homepage.html">HOME | </a>
+                        <a class="pagebreadcrumb" href="About.html">ABOUT US</a>
+                    </div>
+                    
+                    <div class="person">
+                        <div class="photo">
+                            <img src="./Images/raghav.png" />
+                        </div>
+                        <div class="bar">
+                            <img src="./Images/bar.png" />
+                        </div>
+                        <div class="about_person">
+                            <div class="person_name">
+                                Raghav Nayak
+                            </div>
+                            <div class="person_details">
+                            With 2 years of multimedia training 3 years of Multimedia and 3D Animation from Gujarat university, Amdavad, Raghav embarked on high-end projects in multiple formats of shooting, editing, 3D animation and graphic design, and gaining a wealth of experience. He did some live action shortfilms and documentries too for you tube.
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/><br/><br/>
+                    <div class="person">
+                        <div class="photo">
+                            <img src="./Images/milan.png" />
+                        </div>
+                        <div class="bar">
+                            <img src="./Images/bar.png" />
+                        </div>
+                        <div class="about_person">
+                            <div class="person_name">
+                                Milan Jogani
+                            </div>
+                            <div class="person_details">
+                            As a “small-town boy” growing up in Vadnagar, India, Milan always curious about the wider offerings that life had to give. At a young age,Milan started seeking photography opportunities including family weddings and social gatherings. Unknown to him, his photographs were an unexpected success to those that saw his results, capturing hearts at but a  click. Within months, his photography was in grapevine everywhere, and an overwhelming response started to set the foundation for a career as a Professional Photographer.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="leftside">
+                <img src="./Images/Logo.jpg" />
+                <p>Save both time and money with Nayak Production, a home to finest makeup artists, wedding DJs, event planners and wedding services, all under one roof.</p>
+            </div>
+            <div id="rightside">
+                <h2>GET IN TOUCH</h2>
+                <p>Canada +14163017560</p>
+                <p>nayak_raghav17@yahoo.com</p>
+                <p>raghaavnayak@gmail.com</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Nayak Production. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+            var selector, elems, makeActive;
+            selector = '#menuitem a';
+            elems = document.querySelectorAll(selector);
+            makeActive = function () {
+                for (var i = 0; i < elems.length; i++)
+                    elems[i].classList.remove('active');
+                this.classList.add('active');
+            };
+            for (var i = 0; i < elems.length; i++)
+                elems[i].addEventListener('mousedown', makeActive);
+
+
+        </script>
+
+    </body>
+</html>
+
+
