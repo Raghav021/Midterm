@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="J:/Web production/Assignment/MTM6330-midterm/css/style.css">
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <div id="logo">
+                <a href="./Homepage.html">
+                    <img src="./Images/Logo.jpg" />
+                </a>
+            </div>
+            <div id="menuitem">
+                <a href="./Homepage.html" class="active">Home</a>
+                <a href="./About.html">About us</a>
+                <a href="./Services.html">Services</a>
+                <a href="./Contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mainbody">
+            <div class="maindiv">
+                <div class="content">
+                    <div id="slider">
+
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 3</div>
+                                <img src="./Images/Banner-7.jpg" style="width:100%">
+                                <div class="text">Caption One</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 3</div>
+                                <img src="./Images/Banner-2.jpg" style="width:100%">
+                                <div class="text">Caption Two</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 3</div>
+                                <img src="./Images/Banner-8.jpg" style="width:100%">
+                                <div class="text">Caption Three</div>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        </div>
+                        <br>
+
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="services">
+                            <div class="person_name">
+                                WELCOME TO NAYAK PRODUCITON
+                            </div>
+                            <div class="person_details">
+                            We offer the latest trends and technology in the photo and video production industry with quality customer service. We are fun to work with and let you choose from voluminous styles of photography to match your personality. Our services match all budget, from economical to the most extravagant, including destination weddings. We adapt your needs professionally.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="services">
+                            <div class="person_name">
+                                WE ARE ONE-STOP SPECIAL EVENTS SHOP!
+                            </div>
+                            <h3>MISSION</h3>
+                            <div class="person_details">
+                            To provide excellent new-age Audio-Visual services with superior customer service.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="services">
+                            <h3>VISION</h3>
+                            <div class="person_details">
+                            To deliver an exceptional new-media experience for everyone.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="services">
+                            <h3>
+                                MOTTO
+                            </h3>
+                            <div class="person_details">
+                            Commit and Deliver: Our ability to make good on our promises, is an utmost priority.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="leftside">
+                <img src="./Images/Logo.jpg" />
+                <p>Save both time and money with Nayak Production, a home to finest makeup artists, wedding DJs, event planners and wedding services, all under one roof.</p>
+            </div>
+            <div id="rightside">
+                <h2>GET IN TOUCH</h2>
+                <p>Canada +14163017560</p>
+                <p>nayak_raghav17@yahoo.com</p>
+                <p>raghaavnayak@gmail.com</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Nayak Production. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            
+            var selector, elems, makeActive;
+            selector = '#menuitem a';
+            elems = document.querySelectorAll(selector);
+            makeActive = function () {
+                for (var i = 0; i < elems.length; i++)
+                    elems[i].classList.remove('active');
+                this.classList.add('active');
+            };
+            for (var i = 0; i < elems.length; i++)
+                elems[i].addEventListener('mousedown', makeActive);
+            
+            
+        </script>
+
+    </body>
+</html>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
